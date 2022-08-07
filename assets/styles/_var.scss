@@ -1,9 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
 
+
+// Keyframes
+    // HOME-SECTION
+@keyframes swipe-animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
 // Google Fonts
 $roboto: 'Roboto', sans-serif;
 $open: 'Open Sans', sans-serif;
+
+// Colors
+$main-color : #EDEDED;
+$purple-color : #963A87;
+$blue-color : #00648a;
 
 // Mixins
 @mixin dimension($w, $h) {
@@ -43,4 +65,12 @@ body {
     background-position: 0% 0%;
     background-size: cover;
     background-attachment: fixed;
+    .main-site {
+        position: relative;
+        @include dimension(100%, 100%);
+    }
+}
+
+p {
+    margin-bottom: 0;
 }
