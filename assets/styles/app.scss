@@ -1,5 +1,4 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-body {
-    background-color: lightgray;
-}
+@import "./_var.scss";
+@import "./home-section/home-section.scss";

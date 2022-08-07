@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+
+// Google Fonts
+$roboto: 'Roboto', sans-serif;
+$open: 'Open Sans', sans-serif;
+
+// Mixins
+@mixin dimension($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin absolutePosition($top, $left) {
+    position : absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin absolutePositionRight($top, $right) {
+    position : absolute;
+    top: $top;
+    right: $right;
+}
+
+// Default SCSS config
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    @include dimension(100vw, 400vh);
+    background-image: url('../images/background/bg_portrait.jpg');
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: cover;
+    background-attachment: fixed;
+}
