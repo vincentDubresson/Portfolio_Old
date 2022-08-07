@@ -9,10 +9,10 @@
     align-items: center;
     padding-top: 20vh;
     gap: 6vh;
-    border: 1px solid white;            // Delete after work
     .home-section-logo {
         opacity: 0;
         width: 50vw;
+        max-width: 385px;
         transition: 0.8s;
         transition-delay: 1s;
     }
@@ -52,13 +52,16 @@
     }
     .home-section-swipe-down {
         position: absolute;
-        bottom: 20vh;
+        bottom: 15vh;
         left: 50%;
         transform: translate(-50%,-50%);
         .swipe-down-span {
+            @include dimension(6vw, 6vw);
             display: block;
             width: 6vw;
+            max-width: 30px;
             height: 6vw;
+            max-height: 30px;
             border-bottom: 2px solid $blue-color;
             border-right: 2px solid $blue-color;
             transform: rotate(45deg);
@@ -75,18 +78,33 @@
     }
 }
 
-.home-section-logo-display {
-    opacity: 1 !important;
+@media screen and (min-width: 768px) {
+    .home-section-title {
+        font-size: 39px !important;
+    }
+/*     .home-section-title-bienvenue {
+        font-size: 39px !important;
+    }
+    .home-section-title-center {
+        font-size: 39px !important;
+    }
+    .home-section-title-welcome {
+        font-size: 39px !important;
+    } */
 }
 
-.home-section-title-bienvenue-display {
-    right: 4vw !important;
+.home-section-logo-display {
+    opacity: 1 !important;
 }
 
 .home-section-title-center-display {
     opacity: 1 !important;
 }
 
+.home-section-title-bienvenue-display {
+    right: 30px !important;
+}
+
 .home-section-title-welcome-display {
-    left: 4vw !important;
+    left: 30px !important;
 }
