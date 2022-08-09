@@ -5,6 +5,7 @@ if (document.querySelector('.home-section-title-container')) {
     const welcomeText = document.querySelector('.home-section-title-welcome');
     const centerText = document.querySelector('.home-section-title-center');
 
+    // Dynamic display of header
     window.addEventListener('load', () => {
         homeLogo.classList.add('home-section-logo-display');
         bienvenueText.classList.add('home-section-title-bienvenue-display');
