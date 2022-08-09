@@ -13,4 +13,5 @@ import './bootstrap';
 
 require('bootstrap');
 
-import './script/home-section.js';
+import './script/header.js';
+import './script/burger_menu.js';

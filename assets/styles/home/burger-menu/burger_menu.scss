@@ -1,0 +1,97 @@
+@import "../../_var.scss";
+
+.header-mini {
+    @include dimension(100%, 80px);
+    background-color: black;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 80px;
+    z-index: 3;
+    .contact-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 60px;
+        .contact-menu-icons {
+            width: 20px;
+        }
+    }
+    .logo-menu {
+        .logo-menu-logo {
+            height: 70px;
+        }
+    }
+    .burger-menu {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        transition: 0.5s;
+        .burger-menu-span {
+            background-color: $main-color;
+            width : 30px;
+            height : 2px;
+            margin: 3px 0;
+            transition: 0.5s;
+        }
+    }
+}
+.dark-menu-min {
+    position: absolute;
+    bottom: -15px;
+    width: 100vw;
+    transition: 0.5s;
+}
+.hidden-menu {
+    position: absolute;
+    top: -70px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+    line-height: 40px;
+    font-size: 1.5em;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 0;
+    .hidden-menu-links {
+        text-decoration: none;
+        color: $main-color;
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+}
+
+.first-line {
+    transform: rotateZ(45deg) translateX(6px) translateY(5px);
+}
+
+.not-cross {
+    opacity: 0;
+}
+
+.third-line {
+    transform: rotateZ(-45deg) translateX(6px) translateY(-5px);
+}
+
+.dark-menu-max {
+    bottom: -180px;
+}
+
+.flex-menu {
+    top: 80px;
+    opacity: 1;
+    z-index: 2;
+}
+
+.sticky {
+    position: fixed !important;
+    opacity: 1 !important;
+    top: 0;
+    width: 100%;
+}

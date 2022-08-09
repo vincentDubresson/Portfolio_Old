@@ -55,22 +55,6 @@ html {
     overflow-x: hidden;
 }
 
-body {
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    @include dimension(100vw, 400vh);
-    background-image: url('../images/background/bg_portrait.jpg');
-    background-repeat: no-repeat;
-    background-position: 0% 0%;
-    background-size: cover;
-    background-attachment: fixed;
-    .main-site {
-        position: relative;
-        @include dimension(100%, 100%);
-    }
-}
-
 p {
     margin-bottom: 0;
 }

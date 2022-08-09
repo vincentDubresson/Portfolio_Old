@@ -1,4 +1,6 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
 @import "./_var.scss";
-@import "./home-section/home_section.scss";
+@import "./home/index.scss";
+@import "./home/header/header_home_section.scss";
+@import "./home/burger-menu/burger_menu.scss";

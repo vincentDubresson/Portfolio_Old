@@ -3,25 +3,22 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-    <header>
+
+    <header class="home-section">
+        {% include "./home/layouts/_header.html.twig" %}
     </header>
-    <main class="main-site">
-        <section class="home-section">
-            <img class="home-section-logo" src="{{ asset('build/images/logo/vdub-dev-logo.png') }}"/>
-            <div class="home-section-title-container">
-                <p class="home-section-title home-section-title-bienvenue">Bienvenue</p>
-                <p class="home-section-title home-section-title-center">-</p>
-                <p class="home-section-title home-section-title-welcome">Welcome</p>
-            </div>
-            <div class="home-section-swipe-down">
-                <span class="swipe-down-span"></span>
-                <span class="swipe-down-span"></span>
-                <span class="swipe-down-span"></span>
-            </div>  
-        </section>
-        <section class="about-section">
-        </section>
+
+    <main id="about" class="main-site">
+        <article class="content-article">
+            <header class="mobile-header">
+                {% include "./home/layouts/_burger_menu.html.twig" %}               
+            </header>
+            <section class="content-section">
+                <h1>HELLO</h1>
+            </section>
+        </article>
     </main>
+
     <footer>
     </footer>
 {% endblock %}
