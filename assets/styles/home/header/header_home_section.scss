@@ -4,7 +4,7 @@
 .home-section-logo {
     opacity: 0;
     width: 50vw;
-    max-width: 385px;
+    max-width: 300px;
     transition: 0.8s;
     transition-delay: 1s;
 }
@@ -71,7 +71,7 @@
 
 @media screen and (min-width: 768px) {
     .home-section-title {
-        font-size: 39px !important;
+        font-size: 30px !important;
     }
 }
 

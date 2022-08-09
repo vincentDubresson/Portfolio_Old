@@ -64,3 +64,18 @@ h1 {
     font-weight: 200;
     color: $blue-color;
 }
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 1000px) 
+  and (orientation: landscape) {
+    body {
+        background-color: black;
+        background-image: url('../images/logo/rotate-screen.gif');
+        background-size: 50vh;
+        background-position: center;
+    }
+    .rotate-screen {
+        display: none;
+    }
+}
