@@ -23,7 +23,7 @@ $roboto: 'Roboto', sans-serif;
 $open: 'Open Sans', sans-serif;
 
 // Colors
-$main-color : #EDEDED;
+$main-color : #CBCBCB;
 $purple-color : #963A87;
 $blue-color : #00648a;
 
@@ -57,6 +57,7 @@ html {
 
 p {
     margin-bottom: 0;
+    font-family: $open;
 }
 
 h1 {

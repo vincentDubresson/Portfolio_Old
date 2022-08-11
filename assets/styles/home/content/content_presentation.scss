@@ -1,0 +1,96 @@
+.presentation-title-container {
+    @include dimension(95%, 10%);
+    max-width: 900px;
+    position: relative;
+    z-index: -1;
+    //border: 1px solid gray;
+    .presentation-title-fr {
+        @include absolutePosition(-150px, calc(10% + 2vw)); //top -150
+        opacity: 0;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .presentation-title-en {
+        @include absolutePositionRight(-150px, calc(10% + 2vw)); //top -150
+        color: $purple-color;
+        opacity: 0;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
+.presentation-content {
+    @include dimension(90%, 85%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    max-width: 850px;
+    padding-top: 30px;
+    border-radius: 10px;
+    opacity: 0;
+    z-index: 0;
+    .presentation-content-picture {
+        width: 45%;
+    }
+    .presentation-content-description-fr,
+    .presentation-content-description-en {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        .presentation-content-fr-flag-icon,
+        .presentation-content-en-flag-icon {
+            cursor: pointer;
+            position: absolute;
+            top: 4px;
+            right: 5px;
+            width: 6%;
+            max-width: 25px;
+        }
+        .presentation-content-title {
+            color: $main-color;
+            margin-bottom: 10px;
+        }
+        .presentation-content-text {
+            color: $main-color;
+            text-align: justify;
+            span {
+                font-weight: 800;
+            }
+        }
+        .presentation-content-redirection {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+            .presentation-content-link-icon {
+                width: 20px;
+            }
+            .presentation-content-link {
+                text-decoration: none;
+                color: $purple-color;
+            }
+        }
+    }
+}
+
+.presentation-title-fr-display {
+    top: 10px !important;
+    opacity: 1 !important;
+}
+
+.presentation-title-en-display {
+    top: 40px !important;
+    opacity: 1 !important;
+}
+
+.opacity-display {
+    opacity: 1 !important
+}
+
+.display-none {
+    display: none !important;
+}
+
+// media 900 h1 max font size 35px

@@ -38,13 +38,14 @@ body {
                     position: relative;
                 }
                 .content-section {
+                    overflow: hidden;
                     @include dimension(100vw, 100vh);
                     display: flex;
                     flex-direction: column;
-                    justify-content: flex-start;
+                    justify-content: space-around;
                     align-items: center;
-                    padding-top: 130px;
-                    border: 1px solid white;
+                    padding-top: 110px;
+                    //border: 1px solid white;
                 }
             }
         }
