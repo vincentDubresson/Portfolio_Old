@@ -13,5 +13,7 @@ import './bootstrap';
 
 require('bootstrap');
 
+import './script/onscroll/onscroll.js';
 import './script/header.js';
 import './script/burger_menu.js';
+import './script/content_presentation.js';
