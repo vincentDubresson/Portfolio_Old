@@ -32,12 +32,12 @@ if (document.getElementById('burger-menu')) {
 
     // Functions used to display burger menu when scroll to main site
     window.onscroll = () => { 
-        myFunction()
+        stickyBurger()
     };
 
     const mainSitePosition = mainSite.offsetTop;
 
-    function myFunction() {
+    function stickyBurger() {
         if (window.scrollY >= mainSitePosition) {
             mobileHeader.classList.add("sticky");
             mobileHeader.style.transition = "0.5s";
