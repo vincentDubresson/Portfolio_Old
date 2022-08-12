@@ -3,7 +3,6 @@
     max-width: 900px;
     position: relative;
     z-index: -1;
-    //border: 1px solid gray;
     .presentation-title-fr {
         @include absolutePosition(-150px, calc(10% + 2vw)); //top -150
         opacity: 0;
@@ -24,12 +23,13 @@
     align-items: center;
     gap: 40px;
     max-width: 850px;
-    padding-top: 30px;
+    padding-top: 120px;
     border-radius: 10px;
     opacity: 0;
     z-index: 0;
     .presentation-content-picture {
         width: 45%;
+        max-width: 220px;
     }
     .presentation-content-description-fr,
     .presentation-content-description-en {
@@ -93,4 +93,18 @@
     display: none !important;
 }
 
-// media 900 h1 max font size 35px
+@media screen and (min-width: 900px) {
+    .presentation-title-container {
+        max-width: 600px !important;
+    }
+    .presentation-content {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 150px;
+        .presentation-content-description-en,
+        .presentation-content-description-fr {
+            width: 42%;
+        }
+    }
+}
