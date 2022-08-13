@@ -61,7 +61,7 @@ if (document.querySelector(".main-site")) {
 
     // Function used to display career content
     function careerDisplay() {
-        if (window.scrollY >= 900) {
+        if (window.scrollY >= 750) {
             careerTitleFr.classList.add('career-title-fr-display');
             careerTitleFr.style.transition = "0.8s";
             careerTitleFr.style.transitionTimingDelay = "cubic-bezier(0.075, 0.82, 0.165, 1)";
@@ -76,7 +76,7 @@ if (document.querySelector(".main-site")) {
             careerTitleEn.style.transition = "0.5s";
             careerTitleEn.style.transitionDelay = "0.3s";
         }
-/*         if (window.scrollY >= 600) {
+/*         if (window.scrollY >= 950) {
             presentationContent.classList.add('opacity-display');
             presentationContent.style.transition = "1s";
             presentationContent.style.transitionDelay = "0.5s";

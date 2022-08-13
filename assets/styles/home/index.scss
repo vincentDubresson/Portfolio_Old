@@ -49,7 +49,7 @@ body {
                 .content-professionnal-career {
                     overflow: hidden;
                     width: 100vw;
-                    height: 100vh; // Delete that
+                    //height: 100vh; // Delete that
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
@@ -65,7 +65,7 @@ body {
     .content-section {
         max-width: 600px;
     }
-    .content-professionnal-section {
+    .content-professionnal-career {
         max-width: 600px;
     }
 }
@@ -74,7 +74,7 @@ body {
     .content-section {
         max-width: 900px;
     }
-    .content-professionnal-section {
+    .content-professionnal-career {
         max-width: 900px;
     }
 }
