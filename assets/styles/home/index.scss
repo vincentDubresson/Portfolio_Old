@@ -46,10 +46,15 @@ body {
                     align-items: center;
                     padding-top: 110px;
                 }
-                .professionnal-career-section {
-                    h1 {
-                        margin-top: 100px;
-                    }
+                .content-professionnal-career {
+                    overflow: hidden;
+                    width: 100vw;
+                    height: 100vh; // Delete that
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding-top: 110px;
                 }
             }
         }
@@ -60,10 +65,16 @@ body {
     .content-section {
         max-width: 600px;
     }
+    .content-professionnal-section {
+        max-width: 600px;
+    }
 }
 
 @media screen and (min-width: 900px) {
     .content-section {
+        max-width: 900px;
+    }
+    .content-professionnal-section {
         max-width: 900px;
     }
 }

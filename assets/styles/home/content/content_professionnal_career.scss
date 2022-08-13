@@ -1,0 +1,27 @@
+.career-title-container {
+    @include dimension(95%, 10%);
+    max-width: 900px;
+    position: relative;
+    z-index: -1;
+    .career-title-fr {
+        @include absolutePosition(10px, -100vw);
+        opacity: 0; // opacity 0
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .career-title-en {
+        @include absolutePositionRight(40px, -100vw);
+        color: $purple-color;
+        opacity: 0; // opacity 0
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
+
+.career-title-fr-display {
+    left: calc(10% + 2vw) !important;
+    opacity: 1 !important;
+}
+
+.career-title-en-display {
+    right: calc(10% + 2vw) !important;
+    opacity: 1 !important;
+}

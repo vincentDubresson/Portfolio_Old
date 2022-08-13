@@ -7,6 +7,8 @@ if (document.querySelector(".main-site")) {
     const presentationContent = document.querySelector('.presentation-content');
     const frenchPresentation = document.querySelector('.presentation-content-description-fr');
     const englishPresentation = document.querySelector('.presentation-content-description-en');
+    const careerTitleFr = document.querySelector('.career-title-fr');
+    const careerTitleEn = document.querySelector('.career-title-en');
 
     const mainSitePosition = mainSite.offsetTop;
     
@@ -14,6 +16,7 @@ if (document.querySelector(".main-site")) {
         console.log(window.scrollY);
         stickyBurger();
         presentationDisplay();
+        careerDisplay()
     };
     
     // Function used to display burger-menu
@@ -54,6 +57,35 @@ if (document.querySelector(".main-site")) {
             frenchPresentation.classList.remove('display-none');
             englishPresentation.classList.add('display-none');
         }
+    }
+
+    // Function used to display career content
+    function careerDisplay() {
+        if (window.scrollY >= 900) {
+            careerTitleFr.classList.add('career-title-fr-display');
+            careerTitleFr.style.transition = "0.8s";
+            careerTitleFr.style.transitionTimingDelay = "cubic-bezier(0.075, 0.82, 0.165, 1)";
+            careerTitleEn.classList.add('career-title-en-display');
+            careerTitleEn.style.transition = "0.8s";
+            careerTitleFr.style.transitionTimingDelay = "cubic-bezier(0.075, 0.82, 0.165, 1)";
+            careerTitleEn.style.transitionDelay = "0.3s";
+        } else {
+            careerTitleFr.classList.remove('career-title-fr-display');
+            careerTitleFr.style.transition = "0.5s";
+            careerTitleEn.classList.remove('career-title-en-display');
+            careerTitleEn.style.transition = "0.5s";
+            careerTitleEn.style.transitionDelay = "0.3s";
+        }
+/*         if (window.scrollY >= 600) {
+            presentationContent.classList.add('opacity-display');
+            presentationContent.style.transition = "1s";
+            presentationContent.style.transitionDelay = "0.5s";
+        } else {
+            presentationContent.classList.remove('opacity-display');
+            presentationContent.style.transition = "1s";
+            frenchPresentation.classList.remove('display-none');
+            englishPresentation.classList.add('display-none');
+        } */
     }
     
 }

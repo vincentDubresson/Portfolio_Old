@@ -58,6 +58,7 @@ html {
 p {
     margin-bottom: 0;
     font-family: $open;
+    color: $main-color;
 }
 
 h1 {
@@ -124,6 +125,14 @@ p, a {
     p, a {
         font-size: 1.1rem;
     }
+}
+
+.opacity-display {
+    opacity: 1 !important
+}
+
+.display-none {
+    display: none !important;
 }
 
 @media only screen 
