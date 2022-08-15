@@ -6,7 +6,6 @@ use App\Entity\Website;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
-use phpDocumentor\Reflection\Types\Self_;
 
 class WebsiteFixtures extends Fixture implements DependentFixtureInterface
 {
