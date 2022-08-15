@@ -9,6 +9,7 @@ if (document.querySelector(".main-site")) {
     const englishPresentation = document.querySelector('.presentation-content-description-en');
     const careerTitleFr = document.querySelector('.career-title-fr');
     const careerTitleEn = document.querySelector('.career-title-en');
+    const careerContent = document.querySelector('.career-content');
 
     const mainSitePosition = mainSite.offsetTop;
     
@@ -50,7 +51,7 @@ if (document.querySelector(".main-site")) {
         if (window.scrollY >= 600) {
             presentationContent.classList.add('opacity-display');
             presentationContent.style.transition = "1s";
-            presentationContent.style.transitionDelay = "0.5s";
+            presentationContent.style.transitionDelay = "1s";
         } else {
             presentationContent.classList.remove('opacity-display');
             presentationContent.style.transition = "1s";
@@ -61,7 +62,7 @@ if (document.querySelector(".main-site")) {
 
     // Function used to display career content
     function careerDisplay() {
-        if (window.scrollY >= 750) {
+        if (window.scrollY >= 800) {
             careerTitleFr.classList.add('career-title-fr-display');
             careerTitleFr.style.transition = "0.8s";
             careerTitleFr.style.transitionTimingDelay = "cubic-bezier(0.075, 0.82, 0.165, 1)";
@@ -76,16 +77,14 @@ if (document.querySelector(".main-site")) {
             careerTitleEn.style.transition = "0.5s";
             careerTitleEn.style.transitionDelay = "0.3s";
         }
-/*         if (window.scrollY >= 950) {
-            presentationContent.classList.add('opacity-display');
-            presentationContent.style.transition = "1s";
-            presentationContent.style.transitionDelay = "0.5s";
+        if (window.scrollY >= 950) {
+            careerContent.classList.add('opacity-display');
+            careerContent.style.transition = "1s";
+            careerContent.style.transitionDelay = "1s";
         } else {
-            presentationContent.classList.remove('opacity-display');
-            presentationContent.style.transition = "1s";
-            frenchPresentation.classList.remove('display-none');
-            englishPresentation.classList.add('display-none');
-        } */
+            careerContent.classList.remove('opacity-display');
+            careerContent.style.transition = "1s";
+        }
     }
     
 }

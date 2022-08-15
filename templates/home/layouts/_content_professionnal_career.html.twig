@@ -3,5 +3,81 @@
 	<h1 class="career-title-en">My career</h1>
 </div>
 <div class="career-content">
-
+    <img class="career-content-fr-flag-icon" src="{{ asset('build/images/icons/royaume-uni.png') }}"/>
+    <img class="career-content-en-flag-icon display-none" src="{{ asset('build/images/icons/la-france.png') }}"/>
+    <div class="career-content-card-container">
+        {% for i in 0..6 %}
+            {% if careerList[i].isWork is same as false %}
+                <div class="career-study-content-card-fr">
+                    <div class="career-content-card-arrow">
+                        <div class="up-arrow"></div>
+                        <div class="down-arrow"></div>
+                    </div>
+                    <p class="career-content-title">{{ careerList[i].title }} {{ careerList[i].site }}</p>
+                    {% if careerList[i].location is not null %}
+                        <p class="career-content-location">➤ {{ careerList[i].location }}</p>
+                    {% endif %}
+                    <p class="career-content-date">➤ {{ careerList[i].date }}</p>
+                    {% if careerList[i].description is not null %}
+                        <p class="career-content-description">{{ careerList[i].description }}</p>
+                    {% endif %}
+                </div>
+            {% else %}
+                <div class="career-work-content-card-fr">
+                    <div class="career-content-card-arrow">
+                        <div class="up-arrow"></div>
+                        <div class="down-arrow"></div>
+                    </div>
+                    <p class="career-content-title">{{ careerList[i].title }}{{ careerList[i].site }}</p>
+                    {% if careerList[i].location is not null %}
+                        <p class="career-content-location">➤ {{ careerList[i].location }}</p>
+                    {% endif %}
+                    <p class="career-content-date">➤ {{ careerList[i].date }}</p>
+                    {% if careerList[i].description is not null %}
+                        <p class="career-content-description">{{ careerList[i].description }}</p>
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
+        {% for i in 7..13 %}
+            {% if careerList[i].isWork is same as false %}
+                <div class="career-study-content-card-en display-none">
+                    <div class="career-content-card-arrow">
+                        <div class="up-arrow"></div>
+                        <div class="down-arrow"></div>
+                    </div>
+                    <p class="career-content-title">{{ careerList[i].title }}{{ careerList[i].site }}</p>
+                    {% if careerList[i].location is not null %}
+                        <p class="career-content-location">➤ {{ careerList[i].location }}</p>
+                    {% endif %}
+                    <p class="career-content-date">➤ {{ careerList[i].date }}</p>
+                    {% if careerList[i].description is not null %}
+                        <p class="career-content-description">{{ careerList[i].description }}</p>
+                    {% endif %}
+                </div>
+            {% else %}
+                <div class="career-work-content-card-en display-none">
+                    <div class="career-content-card-arrow">
+                        <div class="up-arrow"></div>
+                        <div class="down-arrow"></div>
+                    </div>
+                    <p class="career-content-title">{{ careerList[i].title }}{{ careerList[i].site }}</p>
+                    {% if careerList[i].location is not null %}
+                        <p class="career-content-location">➤ {{ careerList[i].location }}</p>
+                    {% endif %}
+                    <p class="career-content-date">➤ {{ careerList[i].date }}</p>
+                    {% if careerList[i].description is not null %}
+                        <p class="career-content-description">{{ careerList[i].description }}</p>
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="career-content-arrow-container">
+        <div class="career-content-arrow left-arrow">
+        </div>
+        <div class="career-content-arrow right-arrow">
+        </div>
+    </div>
+    
 </div>

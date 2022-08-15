@@ -4,7 +4,7 @@ body {
     position: relative;
     overflow-x: hidden;
     overflow-y: scroll;
-    @include dimension(100vw, 400vh);
+    @include dimension(100vw, 600vh);
     background-image: url('../../images/background/bg_portrait.jpg');
     background-repeat: no-repeat;
     background-position: 0% 0%;
@@ -14,7 +14,7 @@ body {
         @include dimension(100%, 100%);
         .home-section {
             position: relative;
-            @include dimension(100%, 25%);
+            @include dimension(100%, 100vh);
             display: flex;
             flex-direction: column;
             justify-content: flex-start;

@@ -16,17 +16,20 @@ class Career
     #[ORM\Column(length: 255)]
     private ?string $title = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $site = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $location = null;
 
     #[ORM\Column(length: 255)]
     private ?string $date = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $description = null;
+
+    #[ORM\Column]
+    private ?bool $isWork = null;
 
     public function getId(): ?int
     {
@@ -89,6 +92,18 @@ class Career
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function isIsWork(): ?bool
+    {
+        return $this->isWork;
+    }
+
+    public function setIsWork(bool $isWork): self
+    {
+        $this->isWork = $isWork;
 
         return $this;
     }

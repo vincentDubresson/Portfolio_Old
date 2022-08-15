@@ -13,7 +13,8 @@ import './bootstrap';
 
 require('bootstrap');
 
-import './script/onscroll/onscroll.js';
-import './script/header.js';
-import './script/burger_menu.js';
-import './script/content_presentation.js';
+import './script/onscroll/onscroll';
+import './script/header';
+import './script/burger_menu';
+import './script/content_presentation';
+import './script/content_professionnal_career';

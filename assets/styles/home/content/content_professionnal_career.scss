@@ -16,17 +16,109 @@
     }
 }
 .career-content {
-    @include dimension(90%, 85%);
+    position: relative;
+    @include dimension(90%, auto);
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 40px;
-    max-width: 850px;
-    padding-top: 120px;
+    max-width: 700px;
+    padding-top: 150px;
     border-radius: 10px;
-    opacity: 1;
+    opacity: 0;
     z-index: 0;
+    .career-content-fr-flag-icon,
+    .career-content-en-flag-icon {
+        cursor: pointer;
+        @include absolutePosition(110px, 5px);
+    }
+    .career-content-card-container {
+        position: relative;
+        @include dimension(90%, 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        .career-study-content-card-fr,
+        .career-study-content-card-en {
+            border-top: 6px solid $blue-color;
+            .career-content-description {
+                padding-top: 15px;
+                border-top: 1px solid $blue-color;
+            }
+        }
+        .career-work-content-card-fr,
+        .career-work-content-card-en {
+            border-top: 6px solid $purple-color;
+            .career-content-description {
+                padding-top: 15px;
+                border-top: 1px solid $purple-color;
+            }
+        }
+        .career-study-content-card-fr,
+        .career-study-content-card-en,
+        .career-work-content-card-fr,
+        .career-work-content-card-en {
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 10px;
+            .career-content-card-arrow {
+                @include absolutePositionRight(0px, -25px);
+                position: absolute;
+                @include dimension(25px, 20px);
+                .up-arrow {
+                    width: 0;
+                    height: 0;
+                    border-bottom: 15px solid rgba(255, 255, 255, 0.2);
+                    border-right: 20px solid transparent;
+                }
+                .down-arrow {
+                    width: 0;
+                    height: 0;
+                    border-top: 15px solid rgba(255, 255, 255, 0.2);
+                    border-right: 20px solid transparent;
+                }
+            }
+            .career-content-title {
+                font-weight: 600;
+                line-height: 20px;
+                margin-bottom: 5px;
+            }
+            .career-content-location {
+                font-size: 15px;
+            }
+            .career-content-date {
+                font-size: 15px;
+                padding-bottom: 5px;
+            }
+            .career-content-description {
+                font-size: 15px;
+                text-align: justify;
+                line-height: 20px;
+            }
+        }
+    }
+    .career-content-arrow-container {
+        box-sizing: border-box;
+        display: flex;
+        width: 20px;
+        .career-content-arrow {
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 50%;
+        }
+        .left-arrow {
+            transform: skewY(-45deg);
+            border-right: 1px solid rgba(150, 58, 135, 0.5);
+        }
+        .right-arrow {
+            transform: skewY(45deg);
+            border-left: 1px solid rgba(150, 58, 135, 0.5);
+        }
+    }
 }
 
 .career-title-fr-display {
@@ -39,18 +131,27 @@
     opacity: 1 !important;
 }
 
+@media screen and (min-width: 768px) {
+    .career-content-title {
+        font-size: 17px;
+    }
+}
+
 @media screen and (min-width: 900px) {
     .career-title-container {
         max-width: 600px !important;
     }
-/*     .career-content {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        padding-top: 150px;
-        .presentation-content-description-en,
-        .presentation-content-description-fr {
-            width: 42%;
-        }
-    } */
+    .career-content-title {
+        font-size: 18px;
+    }
+    .career-content-location {
+        font-size: 16px !important;
+    }
+    .career-content-date {
+        font-size: 16px !important;
+    }
+    .career-content-description {
+        font-size: 16px !important;
+    }
+    
 }
