@@ -49,7 +49,16 @@ body {
                 .content-professionnal-career {
                     overflow: hidden;
                     width: 100vw;
-                    //height: 100vh; // Delete that
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding-top: 110px;
+                }
+                .content-portfolio {
+                    overflow: hidden;
+                    width: 100vw;
+                    height: 100vh; // A supprimer
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;

@@ -1,0 +1,27 @@
+.portfolio-title-container {
+    @include dimension(95%, 10%);
+    max-width: 900px;
+    position: relative;
+    z-index: -1;
+    .portfolio-title-fr {
+        @include absolutePosition(-150px, calc(10% + 2vw));
+        opacity: 0;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .portfolio-title-en {
+        @include absolutePositionRight(-150px, calc(10% + 2vw));
+        color: $purple-color;
+        opacity: 0;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
+
+.portfolio-title-fr-display {
+    top: 10px !important;
+    opacity: 1 !important;
+}
+
+.portfolio-title-en-display {
+    top: 40px !important;
+    opacity: 1 !important;
+}

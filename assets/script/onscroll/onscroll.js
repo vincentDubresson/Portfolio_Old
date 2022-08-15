@@ -10,6 +10,8 @@ if (document.querySelector(".main-site")) {
     const careerTitleFr = document.querySelector('.career-title-fr');
     const careerTitleEn = document.querySelector('.career-title-en');
     const careerContent = document.querySelector('.career-content');
+    const portfolioTitleFr = document.querySelector('.portfolio-title-fr');
+    const portfolioTitleEn = document.querySelector('.portfolio-title-en');
 
     const mainSitePosition = mainSite.offsetTop;
     
@@ -17,7 +19,8 @@ if (document.querySelector(".main-site")) {
         console.log(window.scrollY);
         stickyBurger();
         presentationDisplay();
-        careerDisplay()
+        careerDisplay();
+        portfolioDisplay();
     };
     
     // Function used to display burger-menu
@@ -86,6 +89,33 @@ if (document.querySelector(".main-site")) {
             careerContent.style.transition = "1s";
         }
     }
+
+        // Function used to display portfolio content
+        function portfolioDisplay() {
+            if (window.scrollY >= 2070) {
+                portfolioTitleFr.classList.add('portfolio-title-fr-display');
+                portfolioTitleFr.style.transition = "0.8s";
+                portfolioTitleFr.style.transitionTimingDelay = "cubic-bezier(0.075, 0.82, 0.165, 1)";
+                portfolioTitleEn.classList.add('portfolio-title-en-display');
+                portfolioTitleEn.style.transition = "0.8s";
+                portfolioTitleFr.style.transitionTimingDelay = "cubic-bezier(0.075, 0.82, 0.165, 1)";
+                portfolioTitleEn.style.transitionDelay = "0.3s";
+            } else {
+                portfolioTitleFr.classList.remove('portfolio-title-fr-display');
+                portfolioTitleFr.style.transition = "0.5s";
+                portfolioTitleEn.classList.remove('portfolio-title-en-display');
+                portfolioTitleEn.style.transition = "0.5s";
+                portfolioTitleEn.style.transitionDelay = "0.3s";
+            }
+/*             if (window.scrollY >= 950) {
+                careerContent.classList.add('opacity-display');
+                careerContent.style.transition = "1s";
+                careerContent.style.transitionDelay = "1s";
+            } else {
+                careerContent.classList.remove('opacity-display');
+                careerContent.style.transition = "1s";
+            } */
+        }
     
 }
 
