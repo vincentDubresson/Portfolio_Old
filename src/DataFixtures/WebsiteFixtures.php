@@ -75,8 +75,7 @@ class WebsiteFixtures extends Fixture implements DependentFixtureInterface
         ],
         [
             "title" => "Wilders Helpers",
-            "description" => "
-            Personal end-of-training project in Web Development. Private classifieds site between Wilders. Tribute to the PHP session of the Wild Code School of Lyon.",
+            "description" => "Personal end-of-training project in Web Development. Private classifieds site between Wilders. Tribute to the PHP session of the Wild Code School of Lyon.",
             "language" => ["PHP", "Symfony", "Sass", "Javascript"],
             "link" => "http://wilders-helpers.vdub-dev.fr/",
             "picture" => "build/images/background/websites/wilders-helpers.png"

@@ -44,6 +44,7 @@
         justify-content: center;
         align-items: center;
         max-width: 630px;
+        margin-bottom: 10px;
         border: 5px solid rgba(255, 255, 255, 0.2);
         border-radius: 20px;
 
@@ -131,7 +132,7 @@
         .portfolio-card-fr,
         .portfolio-card-en {
             //min-width: 380px !important;
-            min-width: 398px !important;
+            //min-width: 398px !important;
             max-width: 440px;
     
         }
