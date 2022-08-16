@@ -12,6 +12,7 @@ if (document.querySelector(".main-site")) {
     const careerContent = document.querySelector('.career-content');
     const portfolioTitleFr = document.querySelector('.portfolio-title-fr');
     const portfolioTitleEn = document.querySelector('.portfolio-title-en');
+    const portfolioContent = document.querySelector('.portfolio-content');
 
     const mainSitePosition = mainSite.offsetTop;
     
@@ -107,14 +108,14 @@ if (document.querySelector(".main-site")) {
                 portfolioTitleEn.style.transition = "0.5s";
                 portfolioTitleEn.style.transitionDelay = "0.3s";
             }
-/*             if (window.scrollY >= 950) {
-                careerContent.classList.add('opacity-display');
-                careerContent.style.transition = "1s";
-                careerContent.style.transitionDelay = "1s";
+            if (window.scrollY >= 2200) {
+                portfolioContent.classList.add('opacity-display');
+                portfolioContent.style.transition = "1s";
+                portfolioContent.style.transitionDelay = "0.5s";
             } else {
-                careerContent.classList.remove('opacity-display');
-                careerContent.style.transition = "1s";
-            } */
+                portfolioContent.classList.remove('opacity-display');
+                portfolioContent.style.transition = "0.5s";
+            }
         }
     
 }

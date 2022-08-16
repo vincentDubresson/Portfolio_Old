@@ -14,6 +14,18 @@ class LanguageFixtures extends Fixture
             "picture" => "build/images/logo/language/html.png"
         ],
         [
+            "name" => "PHP",
+            "picture" => "build/images/logo/language/php.png"
+        ],
+        [
+            "name" => "Symfony",
+            "picture" => "build/images/logo/language/symfony.png"
+        ],
+        [
+            "name" => "Javascript",
+            "picture" => "build/images/logo/language/javascript.png"
+        ],
+        [
             "name" => "CSS",
             "picture" => "build/images/logo/language/css.png"
         ],
@@ -24,18 +36,6 @@ class LanguageFixtures extends Fixture
         [
             "name" => "Sass",
             "picture" => "build/images/logo/language/sass.png"
-        ],
-        [
-            "name" => "Javascript",
-            "picture" => "build/images/logo/language/javascript.png"
-        ],
-        [
-            "name" => "PHP",
-            "picture" => "build/images/logo/language/php.png"
-        ],
-        [
-            "name" => "Symfony",
-            "picture" => "build/images/logo/language/symfony.png"
         ],
     ];
 

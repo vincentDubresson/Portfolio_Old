@@ -4,7 +4,7 @@ body {
     position: relative;
     overflow-x: hidden;
     overflow-y: scroll;
-    @include dimension(100vw, 600vh);
+    @include dimension(100vw, 800vh);
     background-image: url('../../images/background/bg_portrait.jpg');
     background-repeat: no-repeat;
     background-position: 0% 0%;
@@ -58,7 +58,6 @@ body {
                 .content-portfolio {
                     overflow: hidden;
                     width: 100vw;
-                    height: 100vh; // A supprimer
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
@@ -77,6 +76,9 @@ body {
     .content-professionnal-career {
         max-width: 600px;
     }
+    .content-portfolio {
+        max-width: 600px;
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -85,5 +87,8 @@ body {
     }
     .content-professionnal-career {
         max-width: 900px;
+    }
+    .content-portfolio {
+        max-width: 1100px;
     }
 }

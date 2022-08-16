@@ -3,4 +3,46 @@
 	<h1 class="portfolio-title-en">My work</h1>
 </div>
 <div class="portfolio-content">
+	<img class="portfolio-fr-flag-icon" src="{{ asset('build/images/icons/royaume-uni.png') }}"/>
+	<img class="portfolio-en-flag-icon display-none" src="{{ asset('build/images/icons/la-france.png') }}"/>
+	{% for i in 5..9 %}
+		<div class="portfolio-card-fr">
+			<img class="portfolio-card-picture" src="{{ asset('' ~ websites[i].picture ~ '') }}"/>
+			<div class="portfolio-card-details">
+				<h2 class="portfolio-card-details-title">{{ websites[i].title }}</h2>
+				<p class="portfolio-card-details-description">
+					{{ websites[i].description }}
+				</p>
+				<h4>Technologies</h4>
+				<div class="portfolio-card-details-languages">
+					{% for language in websites[i].language %}
+						<img class="portfolio-card-details-picture" src="{{ asset('' ~ language.logo ~ '') }}"/>
+					{% endfor %}
+				</div>
+				<a href="{{ websites[i].link }}" target="_blank">
+					<button class="portfolio-card-details-button">Accéder au site</button>
+				</a>
+			</div>
+		</div>
+	{% endfor %}
+	{% for i in 0..4 %}
+		<div class="portfolio-card-en display-none">
+			<img class="portfolio-card-picture" src="{{ asset('' ~ websites[i].picture ~ '') }}"/>
+			<div class="portfolio-card-details">
+				<h2 class="portfolio-card-details-title">{{ websites[i].title }}</h2>
+				<p class="portfolio-card-details-description">
+					{{ websites[i].description }}
+				</p>
+				<h4>Technologies</h4>
+				<div class="portfolio-card-details-languages">
+					{% for language in websites[i].language %}
+						<img class="portfolio-card-details-picture" src="{{ asset('' ~ language.logo ~ '') }}"/>
+					{% endfor %}
+				</div>
+				<a href="{{ websites[i].link }}" target="_blank">
+					<button class="portfolio-card-details-button">Access the website</button>
+				</a>
+			</div>
+		</div>
+	{% endfor %}
 </div>

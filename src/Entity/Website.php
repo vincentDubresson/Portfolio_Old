@@ -27,6 +27,9 @@ class Website
     #[ORM\ManyToMany(targetEntity: Language::class, inversedBy: 'websites')]
     private Collection $language;
 
+    #[ORM\Column(length: 255)]
+    private ?string $picture = null;
+
     public function __construct()
     {
         $this->language = new ArrayCollection();
@@ -93,6 +96,18 @@ class Website
     public function removeLanguage(Language $language): self
     {
         $this->language->removeElement($language);
+
+        return $this;
+    }
+
+    public function getPicture(): ?string
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(string $picture): self
+    {
+        $this->picture = $picture;
 
         return $this;
     }
