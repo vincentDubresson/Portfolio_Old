@@ -19,3 +19,4 @@ import './script/burger_menu';
 import './script/content_presentation';
 import './script/content_professionnal_career';
 import './script/content_portfolio';
+import './script/content_contact';

@@ -13,6 +13,9 @@ if (document.querySelector(".main-site")) {
     const portfolioTitleFr = document.querySelector('.portfolio-title-fr');
     const portfolioTitleEn = document.querySelector('.portfolio-title-en');
     const portfolioContent = document.querySelector('.portfolio-content');
+    const contactTitleFr = document.querySelector('.contact-title-fr');
+    const contactTitleEn = document.querySelector('.contact-title-en');
+    const contactContent = document.querySelector('.contact-content');
 
     const mainSitePosition = mainSite.offsetTop;
     
@@ -22,6 +25,7 @@ if (document.querySelector(".main-site")) {
         presentationDisplay();
         careerDisplay();
         portfolioDisplay();
+        contactDisplay();
     };
     
     // Function used to display burger-menu
@@ -91,32 +95,71 @@ if (document.querySelector(".main-site")) {
         }
     }
 
-        // Function used to display portfolio content
-        function portfolioDisplay() {
-            if (window.scrollY >= 2070) {
-                portfolioTitleFr.classList.add('portfolio-title-fr-display');
-                portfolioTitleFr.style.transition = "0.8s";
-                portfolioTitleFr.style.transitionTimingDelay = "cubic-bezier(0.075, 0.82, 0.165, 1)";
-                portfolioTitleEn.classList.add('portfolio-title-en-display');
-                portfolioTitleEn.style.transition = "0.8s";
-                portfolioTitleFr.style.transitionTimingDelay = "cubic-bezier(0.075, 0.82, 0.165, 1)";
-                portfolioTitleEn.style.transitionDelay = "0.3s";
-            } else {
-                portfolioTitleFr.classList.remove('portfolio-title-fr-display');
-                portfolioTitleFr.style.transition = "0.5s";
-                portfolioTitleEn.classList.remove('portfolio-title-en-display');
-                portfolioTitleEn.style.transition = "0.5s";
-                portfolioTitleEn.style.transitionDelay = "0.3s";
-            }
-            if (window.scrollY >= 2200) {
-                portfolioContent.classList.add('opacity-display');
-                portfolioContent.style.transition = "1s";
-                portfolioContent.style.transitionDelay = "0.5s";
-            } else {
-                portfolioContent.classList.remove('opacity-display');
-                portfolioContent.style.transition = "0.5s";
-            }
+    // Function used to display portfolio content
+    function portfolioDisplay() {
+        if (window.scrollY >= 2070) {
+            portfolioTitleFr.classList.add('portfolio-title-fr-display');
+            portfolioTitleFr.style.transition = "0.8s";
+            portfolioTitleFr.style.transitionTimingDelay = "cubic-bezier(0.075, 0.82, 0.165, 1)";
+            portfolioTitleEn.classList.add('portfolio-title-en-display');
+            portfolioTitleEn.style.transition = "0.8s";
+            portfolioTitleFr.style.transitionTimingDelay = "cubic-bezier(0.075, 0.82, 0.165, 1)";
+            portfolioTitleEn.style.transitionDelay = "0.3s";
+        } else {
+            portfolioTitleFr.classList.remove('portfolio-title-fr-display');
+            portfolioTitleFr.style.transition = "0.5s";
+            portfolioTitleEn.classList.remove('portfolio-title-en-display');
+            portfolioTitleEn.style.transition = "0.5s";
+            portfolioTitleEn.style.transitionDelay = "0.3s";
         }
+        if (window.scrollY >= 2200) {
+            portfolioContent.classList.add('opacity-display');
+            portfolioContent.style.transition = "1s";
+            portfolioContent.style.transitionDelay = "0.5s";
+        } else {
+            portfolioContent.classList.remove('opacity-display');
+            portfolioContent.style.transition = "0.5s";
+        }
+    }
+
+    // Function used to display contact content
+    function contactDisplay() {
+        if (window.scrollY >= 4410 && window.innerWidth < 994) {
+            contactTitleFr.classList.add('contact-title-fr-display');
+            contactTitleFr.style.transition = "0.8s";
+            contactTitleFr.style.transitionTimingDelay = "cubic-bezier(0.075, 0.82, 0.165, 1)";
+            contactTitleEn.classList.add('contact-title-en-display');
+            contactTitleEn.style.transition = "0.8s";
+            contactTitleFr.style.transitionTimingDelay = "cubic-bezier(0.075, 0.82, 0.165, 1)";
+            contactTitleEn.style.transitionDelay = "0.3s";
+        } else if (window.scrollY >= 3500 && window.innerWidth > 994) {
+            contactTitleFr.classList.add('contact-title-fr-display');
+            contactTitleFr.style.transition = "0.8s";
+            contactTitleFr.style.transitionTimingDelay = "cubic-bezier(0.075, 0.82, 0.165, 1)";
+            contactTitleEn.classList.add('contact-title-en-display');
+            contactTitleEn.style.transition = "0.8s";
+            contactTitleFr.style.transitionTimingDelay = "cubic-bezier(0.075, 0.82, 0.165, 1)";
+            contactTitleEn.style.transitionDelay = "0.3s";
+        } else {
+            contactTitleFr.classList.remove('contact-title-fr-display');
+            contactTitleFr.style.transition = "0.5s";
+            contactTitleEn.classList.remove('contact-title-en-display');
+            contactTitleEn.style.transition = "0.5s";
+            contactTitleEn.style.transitionDelay = "0.3s";
+        }
+        if (window.scrollY >= 4560 && window.innerWidth < 994) {
+            contactContent.classList.add('opacity-display');
+            contactContent.style.transition = "1s";
+            contactContent.style.transitionDelay = "0.5s";
+        } else if (window.scrollY >= 3650 && window.innerWidth > 994) {
+            contactContent.classList.add('opacity-display');
+            contactContent.style.transition = "1s";
+            contactContent.style.transitionDelay = "0.5s";
+        } else {
+            contactContent.classList.remove('opacity-display');
+            contactContent.style.transition = "0.5s";
+        }
+    }
     
 }
 
