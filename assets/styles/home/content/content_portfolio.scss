@@ -28,6 +28,7 @@
     border-radius: 10px;
     opacity: 0;
     z-index: 0;
+    margin-bottom: 30px;
     .portfolio-fr-flag-icon,
     .portfolio-en-flag-icon {
         cursor: pointer;
@@ -105,6 +106,30 @@
         }
     }
 }
+.portfolio-curriculum-fr,
+.portfolio-curriculum-en {
+    @include dimension(90%, 10%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    .portfolio-curriculum-text {
+        text-align: center;
+    }
+    .portfolio-curriculum-button {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        border-radius: 5px;
+        padding: 5px 15px;
+        font-family: $open;
+        transition: 0.2s;
+        &:hover {
+            background-color: rgba(114, 114, 114, 0.5);
+            color: $main-color;
+        }
+    }
+}
 
 .portfolio-title-fr-display {
     top: 10px !important;
@@ -125,18 +150,24 @@
         max-width: 600px !important;
     }
     .portfolio-content {
+        max-width: 600px !important;
+    }
+    .portfolio-curriculum-fr,
+    .portfolio-curriculum-en {
+        max-width: 600px;
+    }
+}
+
+@media screen and (min-width: 994px) {
+    .portfolio-content {
         flex-direction: row;
         justify-content: space-around;
         flex-wrap: wrap;
+        max-width: 900px !important;
         gap: 15px !important;
         .portfolio-card-fr,
         .portfolio-card-en {
-            //min-width: 380px !important;
-            //min-width: 398px !important;
             max-width: 440px;
-    
         }
     }
-
-
 }
